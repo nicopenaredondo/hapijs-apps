@@ -1,0 +1,30 @@
+{
+  "server": {
+    "app": {
+      "slogan": "We push the web forward"
+    }
+  },
+  "connections": [
+    {
+      "port": 3000,
+      "labels": ["web-ui"]
+    },
+    {
+      "port": 3001,
+      "labels": ["api"]
+    }
+  ],
+  "registrations" : [
+  	{
+  		"plugin": {
+  			"register" : "./company"
+  		},
+  		"options" : {
+  			"select" :["api"],
+  			"routes" : {
+  				"prefix" : "/v1"
+  			}
+  		}
+  	}
+  ]
+}
